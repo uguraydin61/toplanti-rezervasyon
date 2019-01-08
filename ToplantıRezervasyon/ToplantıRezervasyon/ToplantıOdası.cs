@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace ToplantıRezervasyon
 {
-    public partial class Form1 : Form
+    public partial class ToplantıOdası : Form
     {
-        public Form1()
+        public ToplantıOdası()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new ToplantıOdası().Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new Rezervasyon().Show();
-
+            new YeniToplantıOdası().Show();
         }
     }
 }
