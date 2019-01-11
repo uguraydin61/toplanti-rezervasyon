@@ -13,10 +13,10 @@ namespace ToplantıRezervasyon
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ToplantıEntities : DbContext
+    public partial class ToplantıEntitiess : DbContext
     {
-        public ToplantıEntities()
-            : base("name=ToplantıEntities")
+        public ToplantıEntitiess()
+            : base("name=ToplantıEntitiess")
         {
         }
     

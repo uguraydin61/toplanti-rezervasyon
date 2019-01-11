@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ToplantiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ToplantıModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Oda">
           <Key>
             <PropertyRef Name="ID" />
@@ -25,7 +25,7 @@ warning 6002: The table/view 'Toplantı.dbo.Rezervasyon' does not have a primary
           <Property Name="RezervasyonAdı" Type="nvarchar" MaxLength="50" />
           <Property Name="Telefon" Type="nchar" MaxLength="11" />
         </EntityType>
-        <EntityContainer Name="ToplantiModelStoreContainer">
+        <EntityContainer Name="ToplantıModelStoreContainer">
           <EntitySet Name="Oda" EntityType="Self.Oda" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -39,7 +39,7 @@ warning 6002: The table/view 'Toplantı.dbo.Rezervasyon' does not have a primary
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ToplantiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ToplantıModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Oda">
           <Key>
             <PropertyRef Name="ID" />
@@ -58,7 +58,7 @@ warning 6002: The table/view 'Toplantı.dbo.Rezervasyon' does not have a primary
           <Property Name="RezervasyonAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="ToplantıEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ToplantıEntitiess" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Oda" EntityType="Self.Oda" />
           <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" />
         </EntityContainer>
@@ -67,9 +67,9 @@ warning 6002: The table/view 'Toplantı.dbo.Rezervasyon' does not have a primary
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ToplantiModelStoreContainer" CdmEntityContainer="ToplantıEntities">
+        <EntityContainerMapping StorageEntityContainer="ToplantıModelStoreContainer" CdmEntityContainer="ToplantıEntitiess">
           <EntitySetMapping Name="Oda">
-            <EntityTypeMapping TypeName="ToplantiModel.Oda">
+            <EntityTypeMapping TypeName="ToplantıModel.Oda">
               <MappingFragment StoreEntitySet="Oda">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Salonİsmi" ColumnName="Salonİsmi" />
@@ -80,7 +80,7 @@ warning 6002: The table/view 'Toplantı.dbo.Rezervasyon' does not have a primary
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Rezervasyon">
-            <EntityTypeMapping TypeName="ToplantiModel.Rezervasyon">
+            <EntityTypeMapping TypeName="ToplantıModel.Rezervasyon">
               <MappingFragment StoreEntitySet="Rezervasyon">
                 <ScalarProperty Name="RezervasyonID" ColumnName="RezervasyonID" />
                 <ScalarProperty Name="RezervasyonAdı" ColumnName="RezervasyonAdı" />
