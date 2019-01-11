@@ -12,10 +12,12 @@ namespace ToplantıRezervasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class Rezervasyon
+    public partial class Oda
     {
-        public int RezervasyonID { get; set; }
-        public string RezervasyonAdı { get; set; }
-        public string Telefon { get; set; }
+        public int ID { get; set; }
+        public string Salonİsmi { get; set; }
+        public Nullable<int> OturmaSayısı { get; set; }
+        public Nullable<int> BilgisayarSayısı { get; set; }
+        public string Esya { get; set; }
     }
 }
